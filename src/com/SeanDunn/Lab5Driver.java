@@ -17,10 +17,12 @@ public class Lab5Driver {
         do {
             System.out.println("Enter in how many sides your dies have");
             diceSides = scan.nextInt();
+            scan.nextLine();
             rollCount++;
             rollDice(diceSides);
 
             System.out.println("Roll Again? (Y/N)");
+            userChar = scan.nextLine().charAt(0);
 
 
 
@@ -30,8 +32,14 @@ public class Lab5Driver {
     }
 
     private static void rollDice(int diceSides) {
-        System.out.println("Roll " + rollCount);
 
+        System.out.println("Roll " + rollCount);
+       System.out.println(getRandomDiceRoll(diceSides));
+        System.out.println(getRandomDiceRoll(diceSides));
+
+    }
+    private static int getRandomDiceRoll(int diceSides){
+        return (int)(Math.random()*diceSides +1);
     }
 
 }
