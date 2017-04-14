@@ -71,5 +71,8 @@ public class Main {
         System.out.print(input + ", ");
     }
 
-
+    public static void CheeseBurger(){
+        int i =5;
+        i++;
+    }
 }
